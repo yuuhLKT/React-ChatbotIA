@@ -34,10 +34,9 @@ React, Typescrpit, TailwindCSS, shadcn/ui
   2. Install dependencies using pnpm, npm, yarn or bun. Exemple: `pnpm install` or `npm install`
   3. Create your acount in [Groq Api Key](https://console.groq.com/login) and generate your API KEY.
   4. Configure your GROQ API key in src/api/groq/groq-api.ts
+     - You can also configure the AI ​​model, the maximum number of tokens per message in src/api/groq/groq-api.ts.
   5. Run the project: `pnpm dev` or `npm run dev`
   6. Open the project in your browser
-
-  - You can also configure the AI ​​model, the maximum number of tokens per message in src/api/groq/groq-api.ts.
 
 ### Usage
 
