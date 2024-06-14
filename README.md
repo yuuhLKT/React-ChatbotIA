@@ -1,4 +1,4 @@
-# Yuri Luiz Kruger Torquato Portfolio
+#React Chatbot IA
 
 ![badge](https://img.shields.io/badge/license-MIT-blue.svg)
 
