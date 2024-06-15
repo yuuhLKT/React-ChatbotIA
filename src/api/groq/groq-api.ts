@@ -1,6 +1,6 @@
 import { Groq } from 'groq-sdk'
 
-const GROQ_API = 'YOUR_GROQ_API_KEY'
+const GROQ_API = 'YOUR_API_KEY'
 
 const groq = new Groq({
     apiKey: GROQ_API,
