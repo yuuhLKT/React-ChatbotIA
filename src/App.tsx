@@ -52,6 +52,10 @@ function App() {
     } finally {
       setIsSending(false)
       setValue('message', '', { shouldValidate: false })
+      const textarea = document.querySelector('textarea')
+      if (textarea) {
+        textarea.style.height = '36px'
+      }
     }
   }
 
@@ -185,13 +189,16 @@ function App() {
                   {...register('message', {
                     maxLength: 350
                   })}
-                  className="text-sm text-black h-9 max-w-full max-h-20 overflow-hidden resize-none word-wrap break-words w-full p-2 pr-5 border border-zinc-300 rounded-md custom-scrollbar sticky top-0 z-10"
+                  className="text-sm text-black max-w-full overflow-hidden h-9 max-h-24 resize-none word-wrap break-words w-full p-2 pr-5 border border-zinc-300 rounded-md custom-scrollbar sticky top-0 z-10"
                   rows={1}
                   onInput={(e) => {
                     e.currentTarget.style.height = 'auto'
                     e.currentTarget.style.height = `${e.currentTarget.scrollHeight}px`
-                    e.currentTarget.style.overflowY =
-                      e.currentTarget.scrollHeight > 40 ? 'auto' : 'hidden'
+                    if (e.currentTarget.scrollHeight > 36) {
+                      e.currentTarget.style.overflowY = 'auto'
+                    } else {
+                      e.currentTarget.style.overflowY = 'hidden'
+                    }
                   }}
                   onKeyPress={handleKeyPress}
                 />
